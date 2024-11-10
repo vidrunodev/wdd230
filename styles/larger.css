@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 1rem 2rem;
+        width: auto;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .card:first-of-type {
+        grid-column: span 2;
+    }
+}
