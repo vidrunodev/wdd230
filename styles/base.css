@@ -30,7 +30,7 @@ header span {
 
 nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Vertical layout by default for mobile */
     align-items: center;
     background-color: #774936;
 }
@@ -40,7 +40,7 @@ nav a {
     padding: 1rem;
     text-decoration: none;
     font-weight: bold;
-    width: 100%;
+    width: 100%; /* Full-width links */
     text-align: center;
 }
 
