@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bruno Chavez - WDD 230 - Web Frontend Development</title>
-    <meta
-      name="description"
-      content="WDD 230 - Web Frontend Development - Bruno Chavez - course assignment portal"
-    />
-    <meta name="author" content="Bruno Chavez" />
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/larger.css" />
-    <link rel="icon" href="favicon.ico" />
-  </head>
 
-  <body>
-    <header>
-      <img src="images/profile.jpg" alt="Profile picture of Bruno Chavez" />
-      <span>Bruno Chavez</span>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno Chavez - WDD 230 - Web Frontend Development</title>
+  <meta name="description" content="WDD 230 - Web Frontend Development - Bruno Chavez - course assignment portal" />
+  <meta name="author" content="Bruno Chavez" />
+  <meta property="og:title" content="Course Home page" />
+  <meta property="og:type" content="Website" />
+  <meta property="og:url" content="https://vidrunodev.github.io/wdd230/" />
+  <meta property="og:image"
+    content="https://cdn.www.gob.pe/uploads/document/file/6542232/979322-pueblo-libre-figura-en-el-septimo-puesto-de-ejecucion-de-inversiones-a-nivel-lima-metropolitana.jpeg" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
 
-    <nav>
-      <ul style="display: flex; justify-content: space-between">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chamber-site-plan.html">Chamber</a></li>
-        <li><a href="#Site Plan">Site Plan</a></li>
-        <li><a href="#Form">Form</a></li>
+<body>
+  <header>
+    <img src="images/profile.jpg" alt="Profile picture of Bruno Chavez" />
+    <span>Bruno Chavez</span>
+  </header>
+
+  <nav>
+    <ul style="display: flex; justify-content: space-between">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chamber-site-plan.html">Chamber</a></li>
+      <li><a href="#Site Plan">Site Plan</a></li>
+      <li><a href="#Form">Form</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>WDD 230: Web Frontend Development</h1>
+    <section class="card">
+      <h2>Learning Activities</h2>
+      <ul>
+        <li><a href="activity1.html">Activity 1</a></li>
+        <li><a href="activity2.html">Activity 2</a></li>
+        <li><a href="activity3.html">Activity 3</a></li>
       </ul>
-    </nav>
+    </section>
 
-    <main>
-      <h1>WDD 230: Web Frontend Development</h1>
-      <section class="card">
-        <h2>Learning Activities</h2>
-        <ul>
-          <li><a href="activity1.html">Activity 1</a></li>
-          <li><a href="activity2.html">Activity 2</a></li>
-          <li><a href="activity3.html">Activity 3</a></li>
-        </ul>
-      </section>
+    <section class="card">
+      <h2>Information</h2>
+      <p>
+        Weather updates, visit count, and other relevant info will be
+        displayed here.
+      </p>
+    </section>
+  </main>
 
-      <section class="card">
-        <h2>Information</h2>
-        <p>
-          Weather updates, visit count, and other relevant info will be
-          displayed here.
-        </p>
-      </section>
-    </main>
+  <footer>
+    <p>&copy; <span id="year"></span> • Bruno Chavez • Peru</p>
+    <p id="lastModified"></p>
+  </footer>
 
-    <footer>
-      <p>&copy; <span id="year"></span> • Bruno Chavez • Peru</p>
-      <p id="lastModified"></p>
-    </footer>
+  <script src="scripts/getDates.js"></script>
+</body>
 
-    <script src="scripts/getDates.js"></script>
-  </body>
 </html>
