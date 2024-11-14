@@ -8,13 +8,21 @@
         background-color: #774936; /* Ensure the background color is applied */
     }
 
-    nav a {
-        padding: 1rem 2rem; /* Add horizontal padding for more space */
-        width: auto; /* Let the links auto-adjust their width based on content */
-        text-align: center; /* Center the text inside the links */
+    nav ul {
+        flex-direction: row; /* Horizontal layout */
+        justify-content: center; /* Center links */
+    }    
+
+    nav li {
+        width: auto; /* Allow links to auto-size */
     }
 
-    /* Optional: Change the header background color */
+    nav a {
+        padding: 1rem 2rem;
+        width: auto;
+        text-align: center; 
+    }
+
     header {
         background-color: #2e5a79;
         padding: 1rem;
@@ -23,10 +31,10 @@
     main {
         max-width: 1200px;
         margin: 0 auto;
-        grid-template-columns: 2fr 1fr; /* Two-column layout for larger screens */
+        grid-template-columns: 2fr 1fr; 
     }
 
     .card:first-of-type {
-        grid-column: span 2; /* First card spans two columns */
+        grid-column: span 2; 
     }
 }
