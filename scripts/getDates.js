@@ -7,15 +7,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastModifiedDate = new Date(document.lastModified);
     lastModifiedElement.textContent = `Last Modified: ${lastModifiedDate.toLocaleDateString('en-US')}`;
 
+    // Hamburger Menu Functionality
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu'); // Corrected selector
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('show'); // Toggle visibility
+        menuToggle.textContent = menu.classList.contains('show') ? '✖' : '☰'; // Toggle button icon
+    });
+
     // Dark Mode Toggle
     const darkModeToggle = document.getElementById('darkModeToggle');
     const mainArea = document.querySelector('main');
 
-    // Load initial state from local storage (if available)
+    // Load initial state from local storage
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
     if (darkModeEnabled) {
         mainArea.classList.add('dark-mode');
-        darkModeToggle.textContent = '☀️'; // Set to light mode icon
+        darkModeToggle.textContent = '☀️'; // Update button icon
     }
 
     darkModeToggle.addEventListener('click', () => {

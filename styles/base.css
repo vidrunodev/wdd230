@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+#menuToggle {
+    flex-direction: column;
+    align-items: center;
+    background-color: #774936;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+
+#menu.show {
+    display: flex; /* Show menu when active */
+}
+
+
+@media (min-width: 500px) {
+    #menu {
+        display: flex; /* Always show menu on larger screens */
+        flex-direction: row;
+        position: static;
+    }
+    
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -79,7 +102,7 @@ main {
     margin: 0 auto;
 }
 
-/* Light mode (default) */
+/* Light mode */
 main {
     background-color: #f3f3f3;
     color: #333;
@@ -89,6 +112,16 @@ main {
 main.dark-mode {
     background-color: #333;
     color: #f3f3f3;
+}
+
+main.dark-mode .card {
+    background-color: #444; /* A slightly lighter shade than the main background */
+    color: #f3f3f3;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Adjust for visibility */
+}
+
+main.dark-mode .card h2 {
+    background-color: #555; /* Match the dark mode theme */
 }
 
 .card {

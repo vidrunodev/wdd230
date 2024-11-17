@@ -377,3 +377,25 @@ template {
 [hidden] {
     display: none;
 }
+
+/* Add custom adjustments at the end of normalize.css */
+
+/* Remove default margin for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure buttons have consistent appearance */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add a default background and text color */
+body {
+    background-color: #f9f9f9;
+    color: #111;
+}
