@@ -1,6 +1,10 @@
 /* Apply styles for larger screens */
 @media (min-width: 768px) {
 
+    #menuToggle {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+
     /* Classic horizontal layout for navigation bar */
     nav {
         flex-direction: row; /* Change to horizontal layout */
@@ -9,8 +13,8 @@
     }
 
     nav ul {
-        flex-direction: row; /* Horizontal layout */
-        justify-content: center; /* Center links */
+        display: flex; /* Display horizontal menu by default */
+        flex-direction: row;
     }    
 
     nav li {

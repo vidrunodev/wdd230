@@ -28,6 +28,15 @@ header span {
     margin-top: 0.5rem;
 }
 
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #fff;
+}
+
 nav {
     display: flex;
     flex-direction: column; /* Vertical layout by default for mobile */
@@ -57,8 +66,8 @@ nav a {
     text-align: center;
 }
 
-nav a:hover{
-    background-color: rgba(12, 12, 11, 0.2)
+nav a:hover {
+    background-color: rgba(12, 12, 11, 0.2);
 }
 
 main {
@@ -68,6 +77,18 @@ main {
     padding: 1rem;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Light mode (default) */
+main {
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Dark mode */
+main.dark-mode {
+    background-color: #333;
+    color: #f3f3f3;
 }
 
 .card {
