@@ -9,28 +9,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Hamburger Menu Functionality
     const menuToggle = document.getElementById('menuToggle');
-    const menu = document.getElementById('menu'); // Corrected selector
+    const menu = document.getElementById('menu');
 
     menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('show'); // Toggle visibility
-        menuToggle.textContent = menu.classList.contains('show') ? '✖' : '☰'; // Toggle button icon
+        menu.classList.toggle('show');
+        menuToggle.textContent = menu.classList.contains('show') ? '✖' : '☰';
     });
 
     // Dark Mode Toggle
     const darkModeToggle = document.getElementById('darkModeToggle');
     const mainArea = document.querySelector('main');
-
-    // Load initial state from local storage
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+
     if (darkModeEnabled) {
         mainArea.classList.add('dark-mode');
-        darkModeToggle.textContent = '☀️'; // Update button icon
+        darkModeToggle.textContent = '☀️';
     }
 
     darkModeToggle.addEventListener('click', () => {
-        mainArea.classList.toggle('dark-mode'); // Toggle dark mode
+        mainArea.classList.toggle('dark-mode');
         const isDarkMode = mainArea.classList.contains('dark-mode');
-        darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙'; // Update button icon
-        localStorage.setItem('darkMode', isDarkMode); // Save preference
+        darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', isDarkMode);
     });
+
+    // Visit Counter
+    const visitCountElement = document.getElementById('visitCount');
+    let visitCount = localStorage.getItem('visitCount') || 0;
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+    visitCountElement.textContent = `Visit Count: ${visitCount}`;
 });
