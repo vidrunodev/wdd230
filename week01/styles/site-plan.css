@@ -1,124 +1,134 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif&family=Roboto&display=swap");
 
+/* Root Variables */
 :root {
-    /* Custom colors for Lima Chamber */
-    --primary-color: #2E5A79; /* A strong blue, representing professionalism */
-    --secondary-color: #F1E1D9; /* A light, neutral color for balance */
-    --accent1-color: #774936; /* Rich brown accent */
-    --accent2-color: #444444; /* Dark gray for text accents */
+    /* Adapted Color Palette */
+    --primary-color: #2E5A79;       /* Used for headers, navigation background, and footer */
+    --secondary-color: #f9f9f9;     /* Background color for the body */
+    --accent1-color: #774936;       /* Used for buttons */
+    --accent2-color: #ffcc00;       /* Used for hover effects on links */
+    
+    --dark-text-color: #333;        /* Standard text color on light backgrounds */
+    --light-text-color: #ffffff;    /* Text color on dark backgrounds */
+
+    --cta-hover-bg-color: #5C3421;  /* Hover background color for buttons */
 
     /* Fonts */
-    --heading-font: "Inria Serif";
+    --heading-font: "Inria Serif", serif;
     --paragraph-font: Roboto, Helvetica, sans-serif;
 
-    /* Text colors */
-    --headline-color-on-white: #2E5A79; /* Blue for headlines */
-    --headline-color-on-color: #F1E1D9; /* Light background for headings */
-    --paragraph-color-on-white: #444444; /* Dark gray for text on light backgrounds */
-    --paragraph-color-on-color: #F1E1D9; /* Light text on colored backgrounds */
-    --paragraph-background-color: #774936; /* Brown background for paragraphs */
-    --nav-link-color: #F1E1D9; /* Light text for nav links */
-    --nav-background-color: #2E5A79; /* Blue navigation background */
-    --nav-hover-link-color: #444444; /* Dark hover text */
-    --nav-hover-background-color: #F1E1D9; /* Light hover background */
+    /* Text Colors */
+    --heading-color-on-light: var(--primary-color); /* Headings on light backgrounds */
+    --heading-color-on-dark: var(--light-text-color); /* Headings on dark backgrounds */
+    --paragraph-color-on-light: var(--dark-text-color); /* Paragraphs on light backgrounds */
+    --paragraph-color-on-dark: var(--light-text-color); /* Paragraphs on dark backgrounds */
 }
 
 /* Global Styles */
 body {
+    font-family: var(--paragraph-font);
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4em;
-    font-size: 18px;
-    text-align: center;
-    background-color: #F1F1F1; /* Light background for the page */
+    padding: 2em;
+    background-color: var(--secondary-color);
+    color: var(--paragraph-color-on-light);
+    line-height: 1.6;
 }
 
-img {
-    display: block;
-    margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
-}
-
-h2 {
-    text-align: center;
-}
-
-hr {
-    height: 3px;
-    margin: 35px 0;
-    background: var(--accent1-color);
-}
-
+/* Header */
 header {
-    padding: 1em;
     text-align: center;
-    color: var(--headline-color-on-color);
-    background-color: var(--paragraph-background-color);
+    background-color: var(--primary-color);
+    color: var(--heading-color-on-dark);
+    padding: 2em 0;
 }
 
-header>h1,
-header>h2 {
-    color: var(--headline-color-on-color);
+header h1 {
+    font-size: 2.5em;
+    margin: 0.2em 0;
+    color: var(--heading-color-on-dark);
 }
 
-p {
-    font-family: var(--paragraph-font);
-    color: var(--paragraph-color-on-white);
-    padding: 1em;
+header h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--heading-color-on-dark);
 }
 
 /* Navigation */
-nav {
-    background-color: var(--nav-background-color);
-    line-height: 3em;
-    text-align: center;
-    font-size: 1.2em;
-}
-
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    padding: 0;
+    background-color: var(--primary-color);
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1em;
 }
 
 nav a {
-    padding: 1em;
-    min-width: 120px;
     text-decoration: none;
-    padding: 10px;
-}
-
-nav a:link,
-nav a:visited {
-    color: var(--nav-link-color);
+    color: var(--light-text-color);
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
+    color: var(--accent2-color);
+    transition: color 0.3s;
 }
 
-/* Color Palette Display */
-.colors {
-    width: 100%;
-    min-width: 350px;
-    margin: 30px auto;
+/* Main Content */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--heading-color-on-light);
+}
+
+.section {
+    padding: 2em 0;
+    margin: 2em 0;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
+    text-align: left;
+}
+
+.section h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
     text-align: center;
+    color: var(--heading-color-on-light);
 }
 
-.colors th {
-    background-color: #999;
+.section p, .section ul {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--paragraph-color-on-light);
 }
 
-.colors td {
-    width: 25%;
-    height: 3em;
+.section ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+.section ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Tables */
+.colors {
+    margin: 2em auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.colors th, .colors td {
+    border: 1px solid var(--dark-text-color);
+    padding: 1em;
+    text-align: center;
 }
 
 .primary {
@@ -137,29 +147,40 @@ nav a:hover {
     background-color: var(--accent2-color);
 }
 
-/* Mobile Layout */
-@media (max-width: 768px) {
-    body {
-        padding: 2em;
-    }
-
-    header {
-        text-align: left;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    section {
-        padding: 2em 0;
-    }
+/* Buttons */
+.cta-button {
+    background-color: var(--accent1-color);
+    color: var(--light-text-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-/* Desktop Layout */
-@media (min-width: 769px) {
-    section {
-        padding: 3em 0;
+.cta-button:hover {
+    background-color: var(--cta-hover-bg-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0.5em 0;
+    }
+
+    .section {
+        padding: 1em;
     }
 }

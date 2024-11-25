@@ -1,113 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lima Chamber of Commerce Site Plan</title>
-    <meta
-      name="description"
-      content="Chamber of Commerce site plan for Lima, Peru"
-    />
-    <link rel="stylesheet" href="styles\site-plan.css" />
-  </head>
+    <meta name="description" content="Chamber of Commerce site plan for Lima, Peru" />
+    <link rel="stylesheet" href="styles/site-plan.css" />
+</head>
 
-  <body>
+<body>
     <header>
-      <h1>Lima Chamber of Commerce Site Plan</h1>
-      <nav>
-        <ul>
-          <li><a href="#site-name">Site Name</a></li>
-          <li><a href="#site-purpose">Site Purpose</a></li>
-          <li><a href="#scenarios">Scenarios</a></li>
-          <li><a href="#color-schema">Color Schema</a></li>
-          <li><a href="#typography">Typography</a></li>
-          <li><a href="#wireframe">Wireframe</a></li>
-        </ul>
-      </nav>
+        <h1>Lima Chamber of Commerce</h1>
+        <h2>Connecting Businesses in Lima, Peru</h2>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#purpose">Purpose</a></li>
+                <li><a href="#scenarios">Scenarios</a></li>
+                <li><a href="#branding">Branding</a></li>
+                <li><a href="#style-guide">Style Guide</a></li>
+                <li><a href="#wireframes">Wireframes</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-      <section id="site-name" class="section">
-        <h2>Site Name</h2>
-        <p><strong>Site Name:</strong> Lima Chamber of Commerce</p>
-        <p>
-          Reason for Name: The name is a direct representation of Lima as the
-          capital of Peru and the hub for economic activity, business services,
-          and community development.
-        </p>
-      </section>
+        <section id="overview" class="section">
+            <h2>Overview</h2>
+            <p>The Lima Chamber of Commerce supports local businesses by promoting networking, economic growth, and
+                community development.</p>
+        </section>
 
-      <section id="site-purpose" class="section">
-        <h2>Site Purpose</h2>
-        <ul>
-          <li>
-            Provide a platform for businesses to promote services and network.
-          </li>
-          <li>
-            Highlight local business opportunities and regional events in Lima.
-          </li>
-        </ul>
-      </section>
+        <section id="purpose" class="section">
+            <h2>Purpose</h2>
+            <ul>
+                <li>Provide a platform for businesses to promote services and network.</li>
+                <li>Highlight local business opportunities and regional events in Lima.</li>
+            </ul>
+        </section>
 
-      <section id="scenarios" class="section">
-        <h2>Scenarios</h2>
-        <ul>
-          <li>
-            What networking events can I attend to connect with local businesses
-            in Lima?
-          </li>
-          <li>Where can I find support for starting a business in Lima?</li>
-          <li>
-            What are the economic trends in Lima and how can I benefit from
-            them?
-          </li>
-        </ul>
-      </section>
+        <section id="scenarios" class="section">
+            <h2>Scenarios</h2>
+            <ul>
+                <li>What networking events can I attend to connect with local businesses in Lima?</li>
+                <li>Where can I find support for starting a business in Lima?</li>
+                <li>What are the economic trends in Lima and how can I benefit from them?</li>
+            </ul>
+        </section>
 
-      <section id="color-schema" class="section">
-        <h2>Color Schema</h2>
-        <p>
-          <strong>Primary Color:</strong> #2E5A79 (used for headings, navigation
-          bar)
-        </p>
-        <p><strong>Accent Color:</strong> #774936 (used for buttons, links)</p>
-      </section>
+        <section id="branding" class="section">
+            <h2>Branding</h2>
+            <h3>Logo</h3>
+            <img src="images/lima-logo.png" alt="Lima Chamber Logo">
+        </section>
 
-      <section id="typography" class="section">
-        <h2>Typography</h2>
-        <p>
-          <strong>Font for Headings:</strong> 'Roboto', sans-serif (applied to
-          all h1, h2, and h3 elements)
-        </p>
-        <p>
-          <strong>Font for Body Text:</strong> 'Arial', sans-serif (applied to
-          all paragraphs and general text)
-        </p>
-      </section>
+        <section id="style-guide" class="section">
+            <h2>Style Guide</h2>
+            <h3>Color Palette</h3>
+            <table class="colors">
+                <tr>
+                    <th>Primary</th>
+                    <th>Secondary</th>
+                    <th>Accent 1</th>
+                    <th>Accent 2</th>
+                </tr>
+                <tr>
+                    <td class="primary">#f5a065</td>
+                    <td class="secondary">#f1e1d9</td>
+                    <td class="accent1">#fc6746</td>
+                    <td class="accent2">#444444</td>
+                </tr>
+            </table>
+        </section>
 
-      <section id="wireframe" class="section">
-        <h2>Wireframe</h2>
-        <p>
-          Here is a rough sketch of the layout for the Lima Chamber of Commerce
-          website:
-        </p>
-        <ul>
-          <li>
-            Mobile View: Single column layout with a stacked header, main
-            content, and footer.
-          </li>
-          <li>
-            Desktop View: Two-column layout with a sidebar for events, and main
-            content for news and announcements.
-          </li>
-        </ul>
-      </section>
+        <section id="wireframes" class="section">
+            <h2>Wireframes</h2>
+            <h3>Home</h3>
+            <img src="images/wireframe-home.png" alt="Home page wireframe">
+            <h3>Events</h3>
+            <img src="images/wireframe-events.png" alt="Events page wireframe">
+        </section>
     </main>
 
     <footer>
-      <p>&copy; <span id="year"></span> • Lima Chamber of Commerce Site Plan</p>
+        <p>&copy; <span id="year"></span> Lima Chamber of Commerce Site Plan</p>
     </footer>
+</body>
 
-    <script src="scripts/getDates.js"></script>
-  </body>
 </html>
