@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
@@ -91,6 +92,10 @@ nav {
     color: white;
 }
 
+#menuToggle, #darkModeToggle {
+    padding: 0.5rem;
+}
+
 #menu.show {
     display: flex;
 }
@@ -118,7 +123,7 @@ picture img {
     left: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     font-size: 1.2rem;
 }
 
@@ -147,5 +152,6 @@ footer {
     background-color: #2e5a79;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
 }
