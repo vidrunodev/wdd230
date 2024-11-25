@@ -1,0 +1,23 @@
+/* Larger Screens */
+@media (min-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    .hero {
+        padding: 5rem 2rem;
+    }
+
+    .card {
+        max-width: 1200px;
+        padding: 2rem 3rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+    }
+}
