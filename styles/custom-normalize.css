@@ -1,32 +1,28 @@
-/* Ensure padding and margin are zero by default */
+/* custom-normalize.css - Custom Reset Styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Normalize body font styles */
 body {
-    font-size: 16px;
-    font-family: 'Arial', sans-serif; /* Example custom font */
+    font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
     line-height: 1.5;
 }
 
-/* Normalize links */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Remove default list styles */
-ul, ol {
+ul,
+ol {
     list-style-type: none;
     padding: 0;
 }
 
-/* Ensure consistent button styling */
 button {
     background: none;
     border: none;

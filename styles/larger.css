@@ -1,44 +1,23 @@
-/* Apply styles for larger screens */
+/* Larger Screens */
 @media (min-width: 768px) {
+    #menu {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-around;
+        background: none;
+    }
 
     #menuToggle {
-        display: none; /* Hide hamburger button on larger screens */
-    }
-
-    /* Classic horizontal layout for navigation bar */
-    nav {
-        flex-direction: row; /* Change to horizontal layout */
-        justify-content: center; /* Center the items horizontally */
-        background-color: #774936; /* Ensure the background color is applied */
-    }
-
-    nav ul {
-        display: flex; /* Display horizontal menu by default */
-        flex-direction: row;
-    }    
-
-    nav li {
-        width: auto; /* Allow links to auto-size */
-    }
-
-    nav a {
-        padding: 1rem 2rem;
-        width: auto;
-        text-align: center; 
-    }
-
-    header {
-        background-color: #2e5a79;
-        padding: 1rem;
+        display: none;
     }
 
     main {
-        max-width: 1200px;
-        margin: 0 auto;
-        grid-template-columns: 2fr 1fr; 
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
     }
 
-    .card:first-of-type {
-        grid-column: span 2; 
+    .hero {
+        grid-column: span 2;
     }
 }

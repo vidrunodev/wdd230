@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bruno Chavez - WDD 230 - Web Frontend Development</title>
+  <title>Bruno Chavez - WDD 230</title>
   <meta name="description" content="WDD 230 - Web Frontend Development - Bruno Chavez - course assignment portal" />
   <meta name="author" content="Bruno Chavez" />
   <meta property="og:title" content="Course Home page" />
@@ -12,16 +12,16 @@
   <meta property="og:url" content="https://vidrunodev.github.io/wdd230/" />
   <meta property="og:image"
     content="https://cdn.www.gob.pe/uploads/document/file/6542232/979322-pueblo-libre-figura-en-el-septimo-puesto-de-ejecucion-de-inversiones-a-nivel-lima-metropolitana.jpeg" />
-  <link rel="stylesheet" href="styles/custom-normalize.css">
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/larger.css" />
-  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles/custom-normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
   <header>
-    <img src="images/profile.webp" alt="Profile picture of Bruno Chavez" width="75" height="100" />
+    <img src="images/profile.webp" alt="Profile picture of Bruno Chavez" class="profile-pic" />
     <span>Bruno Chavez</span>
     <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
     <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
@@ -32,39 +32,38 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="chamber/index.html">Chamber</a></li>
       <li><a href="#Site Plan">Site Plan</a></li>
-      <li><a href="#Form">Form</a></li>
+      <li><a href="#Survey">Survey</a></li>
     </ul>
   </nav>
 
   <main>
+    <!-- Hero Section -->
     <div class="hero">
       <picture>
         <source srcset="images/temple-small.webp" media="(max-width: 400px)">
         <source srcset="images/temple-large.webp" media="(min-width: 960px)">
-        <img src="images/temple-large.webp" alt="Lima Peru Temple" loading="lazy">
+        <img src="images/temple-large.webp" alt="Lima Temple" width="960" height="540">
       </picture>
-      <div class="hero-overlay">Lima Peru Temple</div>
+      <div class="hero-overlay">Lima Temple</div>
     </div>
+
+    <!-- Learning Activities Section -->
     <section class="card">
       <h2>Learning Activities</h2>
       <ul>
-        <li>Week 1:
-          <a href="holygrail.html">Layout</a> |
-          <a href="media-query.html">Media Query</a> |
-          <a href="js-codepen">JavaScript CodePen</a>
-        </li>
-        <li>Week 2:
-          <a href="week02/design.html">Design</a> |
-          <a href="https://codepen.io/Bruno-Chavez-the-typescripter/pen/YzmgVYe">Hamburger Menu</a> |
-          <a href="dom.html">DOM Manipulation Activity</a>
+        <li>Week 1: <a href="#">Grail</a> | <a href="#">Media Query</a></li>
+        <li>Week 2: <a href="#">Design</a> | <a href="#">Menu</a> | <a href="#">BOM-25</a></li>
+        <li>Week 3: <a href="#">WebP</a> | <a href="#">Lazy</a> | <a href="#">srcset</a> | <a href="#">localStorage</a>
         </li>
       </ul>
     </section>
 
+    <!-- Information Section -->
     <section class="card">
       <h2>Information</h2>
-      <p id="visitCount">Visit Count: 0</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.623757486397!2d-76.95144342493859!3d-12.06938778816913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6ef6b787c51%3A0xdb4dfb638e48fae3!2sTemplo%20de%20Lima%20Per%C3%BA!5e0!3m2!1ses-419!2spe!4v1732406957825!5m2!1ses-419!2spe" 
+      <p>🌞 76°F - Sunshine</p>
+      <p>Visit Count: <span id="visitCount">0</span></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.6238338685766!2d-76.95144342536544!3d-12.069382542321422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6ef6b787c51%3A0xdb4dfb638e48fae3!2sTemplo%20de%20Lima%20Per%C3%BA!5e0!3m2!1ses-419!2spe!4v1732490139451!5m2!1ses-419!2spe" 
       width="600" 
       height="450" 
       style="border:0;" 
@@ -76,9 +75,10 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> • Bruno Chavez • Peru</p>
-    <p id="lastModified"></p>
+    <p>&copy; 2023 • Bruno Chavez • Peru</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
+
   <script src="scripts/getDates.js"></script>
 </body>
 

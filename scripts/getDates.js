@@ -1,42 +1,34 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Update year and last modified
-    const yearElement = document.getElementById('year');
-    yearElement.textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    // Update Last Modified Date
+    document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleDateString();
 
-    const lastModifiedElement = document.getElementById('lastModified');
-    const lastModifiedDate = new Date(document.lastModified);
-    lastModifiedElement.textContent = `Last Modified: ${lastModifiedDate.toLocaleDateString('en-US')}`;
+    // Visit Count
+    const visitCount = localStorage.getItem("visitCount") || 0;
+    localStorage.setItem("visitCount", Number(visitCount) + 1);
+    document.getElementById("visitCount").textContent = Number(visitCount) + 1;
 
-    // Hamburger Menu Functionality
-    const menuToggle = document.getElementById('menuToggle');
-    const menu = document.getElementById('menu');
+    // Hamburger Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
 
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('show');
-        menuToggle.textContent = menu.classList.contains('show') ? '✖' : '☰';
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
     });
 
     // Dark Mode Toggle
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const mainArea = document.querySelector('main');
-    const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
 
+    const darkModeEnabled = localStorage.getItem("darkMode") === "true";
     if (darkModeEnabled) {
-        mainArea.classList.add('dark-mode');
-        darkModeToggle.textContent = '☀️';
+        body.classList.add("dark-mode");
+        darkModeToggle.textContent = "☀️";
     }
 
-    darkModeToggle.addEventListener('click', () => {
-        mainArea.classList.toggle('dark-mode');
-        const isDarkMode = mainArea.classList.contains('dark-mode');
-        darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
-        localStorage.setItem('darkMode', isDarkMode);
+    darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+        darkModeToggle.textContent = isDarkMode ? "☀️" : "🌙";
+        localStorage.setItem("darkMode", isDarkMode);
     });
-
-    // Visit Counter
-    const visitCountElement = document.getElementById('visitCount');
-    let visitCount = localStorage.getItem('visitCount') || 0;
-    visitCount++;
-    localStorage.setItem('visitCount', visitCount);
-    visitCountElement.textContent = `Visit Count: ${visitCount}`;
 });
