@@ -96,11 +96,13 @@ select { /* 1 */
     text-transform: none;
 }
 
+/* Updated vendor-prefix handling */
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    -webkit-appearance: button;
+    -webkit-appearance: button; /* Vendor prefix */
+    appearance: button; /* Standard property */
 }
 
 button::-moz-focus-inner,
@@ -118,6 +120,28 @@ button:-moz-focusring,
     outline: 1px dotted ButtonText;
 }
 
+/* Updated vendor-prefix handling for input[type="search"] */
+[type="search"] {
+    -webkit-appearance: textfield; /* Vendor prefix */
+    appearance: textfield; /* Standard property */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/* Updated vendor-prefix handling for ::-webkit-file-upload-button */
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* Vendor prefix */
+    appearance: button; /* Standard property */
+    font: inherit;
+}
+
+textarea {
+    overflow: auto;
+}
+
 fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
@@ -133,35 +157,6 @@ legend {
 
 progress {
     vertical-align: baseline;
-}
-
-textarea {
-    overflow: auto;
-}
-
-[type="checkbox"],
-[type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
-}
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
-    font: inherit; /* 2 */
 }
 
 details {
