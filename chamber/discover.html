@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discover - Lima Chamber of Commerce</title>
+    <meta name="description" content="Discover Lima - Learn more about demographics, attractions, and local features.">
+    <meta name="author" content="Bruno Chavez">
+    <meta property="og:title" content="Discover - Lima Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vidrunodev.github.io/wdd230/chamber/discover.html">
+    <meta property="og:image" content="images/discover-hero.webp">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/custom-normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Lima Chamber of Commerce Logo" class="logo">
+        <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+    </header>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="discover-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <section>
+                <h2>Welcome Back!</h2>
+                <p id="visitMessage">Checking your visit history...</p>
+            </section>
+            <section>
+                <h2>Demographics</h2>
+                <p>Lima has a population of over 9.7 million people and is the largest city in Peru.</p>
+            </section>
+            <section>
+                <h2>Upcoming Events</h2>
+                <p>Explore cultural festivals, art exhibitions, and food fairs happening around Lima.</p>
+            </section>
+            <section>
+                <h2>Local Attractions</h2>
+                <ul>
+                    <li>Historic Center of Lima</li>
+                    <li>Miraflores District</li>
+                    <li>Huaca Pucllana</li>
+                    <li>Magic Water Circuit</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <p>Explore some breathtaking sights of Lima:</p>
+            <div class="images">
+                <img data-src="images/image1.webp" alt="Lima View 1" loading="lazy" class="gallery-image">
+                <img data-src="images/image2.webp" alt="Lima View 2" loading="lazy" class="gallery-image">
+                <img data-src="images/image3.webp" alt="Lima View 3" loading="lazy" class="gallery-image">
+                <img data-src="images/image4.webp" alt="Lima View 4" loading="lazy" class="gallery-image">
+                <img data-src="images/image5.webp" alt="Lima View 5" loading="lazy" class="gallery-image">
+                <img data-src="images/image6.webp" alt="Lima View 6" loading="lazy" class="gallery-image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Lima Chamber of Commerce</p>
+        <p>Study Assignment by Bruno Chavez. Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/discover.js"></script>
+</body>
+
+</html>
