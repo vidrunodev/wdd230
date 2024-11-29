@@ -7,7 +7,10 @@
     <title>Lima Chamber of Commerce</title>
     <meta name="description" content="Lima Chamber of Commerce - Study Assignment Website by Bruno Chavez.">
     <meta name="author" content="Bruno Chavez">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Lima Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vidrunodev.github.io/wdd230/chamber/index.html">
+    <meta property="og:image" content="images/hero-large.webp">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/custom-normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -17,67 +20,75 @@
 
 <body>
     <header>
-        <!-- Logo -->
         <img src="images/logo.png" alt="Lima Chamber of Commerce Logo" class="logo">
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#news">News</a></li>
-            </ul>
-        </nav>
+        <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
     </header>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#directory">Directory</a></li>
+            <li><a href="#join">Join</a></li>
+        </ul>
+    </nav>
 
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <!-- Title and Tagline -->
-            <h1>Welcome to Lima Chamber of Commerce</h1>
-            <p>Connecting businesses and fostering economic growth in Lima.</p>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="card">
-            <!-- Title and Content -->
-            <h2>About Us</h2>
-            <p>The Lima Chamber of Commerce is dedicated to supporting businesses in Lima by providing essential
-                resources, events, and networking opportunities.</p>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="card">
-            <!-- Title and List of Services -->
-            <h2>Business Services</h2>
-            <ul>
-                <li>Legal and Tax Advice</li>
-                <li>Export and Import Assistance</li>
-                <li>Market Research Reports</li>
-            </ul>
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+                <source srcset="images/hero-large.webp" media="(min-width: 960px)">
+                <img src="images/hero-large.webp" alt="Lima Chamber of Commerce">
+            </picture>
+            <div class="hero-overlay">
+                <h1>Welcome to Lima Chamber of Commerce</h1>
+                <p>Connecting businesses and fostering economic growth in Lima.</p>
+                <a href="#join" class="cta-button">Join the Chamber</a>
+            </div>
         </section>
 
         <!-- Events Section -->
         <section id="events" class="card">
-            <!-- Title, Content, and Call-to-Action Button -->
-            <h2>Upcoming Events</h2>
-            <p>Join our business networking events to connect with like-minded professionals.</p>
-            <button class="cta-button">View All Events</button>
+            <h2>Events</h2>
+            <p><strong>Ribbon Cutting:</strong> Join us for the opening of Lima's newest attraction! <a
+                    href="#more-info">More info...</a></p>
         </section>
 
-        <!-- News Section -->
-        <section id="news" class="card">
-            <!-- Title and Content -->
-            <h2>Latest News</h2>
-            <p>Stay updated with the latest developments in Lima's business landscape.</p>
+        <!-- Weather Section -->
+        <section id="weather" class="card">
+            <h2>Weather</h2>
+            <p><img src="images/weather-icon.png" alt="Weather Icon"> 25°C - Sunny</p>
+            <p>Humidity: 65% | Wind: 10 km/h</p>
+        </section>
+
+        <!-- Member Spotlights -->
+        <section id="spotlights" class="card">
+            <h2>Member Spotlights</h2>
+            <div class="spotlight">
+                <h3>Peru Travel Co.</h3>
+                <p>"Explore Peru like never before!"</p>
+                <p><a href="#">Visit Website</a></p>
+            </div>
+            <div class="spotlight">
+                <h3>Coffee Heaven</h3>
+                <p>"Fresh coffee, daily."</p>
+                <p><a href="#">Visit Website</a></p>
+            </div>
+            <div class="spotlight">
+                <h3>Green Solutions</h3>
+                <p>"Eco-friendly products for everyone."</p>
+                <p><a href="#">Visit Website</a></p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <!-- Copyright Notice and Study Assignment Information -->
         <p>&copy; 2023 Lima Chamber of Commerce</p>
-        <p>All rights reserved. Study Assignment by Bruno Chavez.</p>
+        <p>Study Assignment by Bruno Chavez. Last Modified: <span id="lastModified"></span></p>
     </footer>
+
+    <script src="scripts/getDates.js"></script>
 </body>
 
 </html>
