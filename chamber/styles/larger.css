@@ -42,4 +42,10 @@
     .cta-button {
         font-size: 1.1rem;
     }
+
+    /* Gallery for Larger Screens */
+    .gallery .images {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larger grid items */
+        gap: 24px;
+    }
 }
