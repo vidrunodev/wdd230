@@ -1,7 +1,37 @@
-/* Larger Screens */
 @media (min-width: 768px) {
-    header {
-        justify-content: space-between;
+    /* Layout adjustments for larger screens */
+    .discover-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Sidebar spans one column, Gallery spans two */
+        grid-template-areas:
+            "h1 h1"
+            "sidebar gallery";
+        gap: 1rem;
+    }
+
+    h1 {
+        grid-area: h1; /* Place the h1 at the top */
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .sidebar {
+        grid-area: sidebar; /* Sidebar on the left below the h1 */
+    }
+
+    .gallery {
+        grid-area: gallery; /* Gallery on the right */
+    }
+
+    .gallery .images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .gallery-image:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
     }
 
     #menu {
@@ -12,40 +42,5 @@
 
     #menuToggle {
         display: none; /* Hide hamburger menu on larger screens */
-    }
-
-    #menu li {
-        list-style: none;
-        margin: 0 1rem;
-    }
-
-    #menu a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-
-    #menu a:hover {
-        color: #ffcc00;
-    }
-
-    .hero {
-        padding: 5rem 2rem;
-    }
-
-    .card {
-        max-width: 1200px;
-        padding: 2rem 3rem;
-    }
-
-    .cta-button {
-        font-size: 1.1rem;
-    }
-
-    /* Gallery for Larger Screens */
-    .gallery .images {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larger grid items */
-        gap: 24px;
     }
 }
