@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bruno Chavez - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Bruno Chavez - course assignment Home Page">
+    <meta name="author" content="Bruno Chavez">
+    <meta property="og:title" content="Course Home page">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="https://vidrunodev.github.io/wdd230/">
+    <meta property="og:image"
+        content="https://cdn.www.gob.pe/uploads/document/file/6542232/979322-pueblo-libre-figura-en-el-septimo-puesto-de-ejecucion-de-inversiones-a-nivel-lima-metropolitana.jpeg">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/custom-normalize.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- Header Section --> 
+    <header>
+        <!-- Profile picture -->
+        <img src="images/profile.webp" alt="Profile picture of Bruno Chavez" class="profile-pic">
+        <span>Bruno Chavez</span>
+        <!-- Toggle navigation menu button -->
+        <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+        <!-- Toggle dark mode button -->
+        <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="#Survey">Survey</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Form</h1>
+        <form method="get" action="thankyou.html">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 • Bruno Chavez • Peru</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+</body>
+
+</html>
